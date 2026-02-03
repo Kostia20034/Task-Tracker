@@ -28,8 +28,8 @@ public:
     void markDone();
 
     
-    // Helper
-    string statusToStrin() const;
+    // Helper has to implement
+    string statusToString() const;
 };
 
 #endif
