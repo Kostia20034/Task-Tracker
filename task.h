@@ -14,7 +14,8 @@ private:
 // initial constructor set status 
 public: 
     //constructor;
-    Task(int userId, const string &userDescription = "");
+    Task(int userId, const string &userDescription);
+    Task(int userId, const string &userDescription, const string &createTime, const string &updateTime, Status fileStatus);
     //getter
     int getId() const;
     Status getStatus() const;
@@ -29,7 +30,6 @@ public:
 
     
     // Helper has to implement
-    string statusToString() const;
 };
 
 #endif

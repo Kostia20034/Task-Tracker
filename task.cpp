@@ -1,16 +1,27 @@
 #include <string>
 #include <ctime>
 using namespace std;
-#include <task.h>
+#include "task.h"
     string getCurrentTime(){
       time_t now = time(nullptr);
-      return ctime(&now);
+      string sttime = ctime(&now);
+      sttime.pop_back(); 
+      return sttime;
     }
-    Task::Task(int userId, const string &userDescription = ""){
+    Task::Task(int userId, const string &userDescription){
+      id = userId;
       description = userDescription;
       status = Status::Todo;
       createdAt = getCurrentTime();
       updatedAt = createdAt;
+    }
+    // constractor to load tasks from file
+    Task::Task(int userId, const string &userDescription, const string &createTime, const string &updateTime, Status fileStatus){
+      id = userId;
+      description = userDescription;
+      createdAt = createTime;
+      updatedAt = updateTime;
+      status = fileStatus;
     }
     int Task::getId() const { return id;}
     Status Task::getStatus() const { return status;}

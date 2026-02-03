@@ -1,6 +1,6 @@
 #ifndef TASK_MANAGER_H
 #define TASK_MANAGER_H
-#include <task.h>
+#include "task.h"
 #include <vector>
 #include <string>
 /*Load tasks from file
@@ -30,5 +30,7 @@ public:
   void addTask(const string &taskContent);
   void listAll();
 };
+string statusToString(Status st);
+Status stringToEnum(const string &str);
 
 #endif
