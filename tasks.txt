@@ -1,2 +1,6 @@
-1|Buy bread|ToDo|Tue Feb  3 10:41:09 2026|Tue Feb  3 10:41:09 2026
-2|Buy bred|ToDo|Tue Feb  3 10:42:13 2026|Tue Feb  3 10:42:13 2026
+1|Buy bred|InProgress|Tue Feb  3 10:42:13 2026|Tue Feb 17 09:49:18 2026
+2|Leetcode|Done|Tue Feb  3 10:51:25 2026|Tue Feb 17 09:49:14 2026
+3|By|ToDo|Tue Feb 17 08:36:03 2026|Tue Feb 17 08:36:03 2026
+4|By_|ToDo|Tue Feb 17 08:36:28 2026|Tue Feb 17 08:36:28 2026
+6|Blue watetr|ToDo|Tue Feb 17 08:44:59 2026|Tue Feb 17 08:44:59 2026
+7|cara sura|ToDo|Tue Feb 17 09:01:21 2026|Tue Feb 17 09:01:21 2026

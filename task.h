@@ -14,6 +14,7 @@ private:
 // initial constructor set status 
 public: 
     //constructor;
+    Task();
     Task(int userId, const string &userDescription);
     Task(int userId, const string &userDescription, const string &createTime, const string &updateTime, Status fileStatus);
     //getter
@@ -27,6 +28,7 @@ public:
     void updateDescription(const string &userDescription);
     void markInProgress();
     void markDone();
+    void setID(int id);
 
     
     // Helper has to implement

@@ -5,7 +5,7 @@ using namespace std;
     string getCurrentTime(){
       time_t now = time(nullptr);
       string sttime = ctime(&now);
-      sttime.pop_back(); 
+      sttime.pop_back();  // remove new line
       return sttime;
     }
     Task::Task(int userId, const string &userDescription){
@@ -14,6 +14,8 @@ using namespace std;
       status = Status::Todo;
       createdAt = getCurrentTime();
       updatedAt = createdAt;
+    }
+    Task::Task(){
     }
     // constractor to load tasks from file
     Task::Task(int userId, const string &userDescription, const string &createTime, const string &updateTime, Status fileStatus){
@@ -31,6 +33,9 @@ using namespace std;
     void Task::updateDescription(const string &userDescription){
       description = userDescription;
       updatedAt = getCurrentTime();
+    }
+    void Task::setID(int id){
+    this->id = id;
     }
     void Task::markInProgress(){
       status = Status::InProgress;

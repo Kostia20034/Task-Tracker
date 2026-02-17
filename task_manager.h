@@ -29,8 +29,9 @@ public:
   TaskManager(const string &userFileName);
   void addTask(const string &taskContent);
   void listAll();
+  void deleteTask(int index);
+  void markTaskStatus(int id, string s);
+  void TaskToString(Task t);
 };
-string statusToString(Status st);
-Status stringToEnum(const string &str);
 
 #endif
