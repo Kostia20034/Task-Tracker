@@ -41,12 +41,8 @@ void TaskManager::loadFromFile(){
       cout << "Error parsing JSON" << e.what() << endl;
       return;
     }
-    // if (!j.is_array()) {
-    //     cout << "JSON root is not an array. Starting with empty tasks.\n";
-    //     return;
-    // }
-    tasks.clear();  // clean the array actualy no need bc every time program is restarted;
-    // json obj is like a map so u just retrieve each key value and create new task from it ez;
+
+    tasks.clear();
     for(auto& item : j){
       int id = item["id"];
         string desc = item["description"];
