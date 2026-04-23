@@ -1,73 +1,43 @@
-# 🚀 C++ Task Tracker CLI
+ 🚀 C++ Task Tracker CLI
 
-A high-performance command-line productivity tool built in C++. This application manages daily workflows using local JSON persistence and features a professional terminal interface with real-time status tracking.
+A high-performance command-line tool for managing daily workflows. Built with C++17, it features local JSON persistence and a clean, logic-driven interface.
 
 ---
 
 ## 🖥️ Usage Demo
-The application features a built-in help menu to ensure a smooth user experience. If run without arguments, it guides the user through available commands:
+The application automatically displays a help menu to guide the user:
 
 ![Task Tracker Menu](image_fc0ee3.png)
 
-### Quick Examples:
+### Quick Commands:
 ```bash
-# 1. Add a new task
-$ ./task_manager add "Complete GitHub README"
+$./task_manager add "Finish Project"  # Add task$ ./task_manager list                 # View all
+$./task_manager modify 1 Done        # Update status$ ./task_manager delete 1             # Remove task
+✨ Highlights
+Data Persistence: Uses nlohmann/json to ensure tasks survive between sessions.
 
-# 2. List all current tasks with timestamps
-$ ./task_manager list
+Smart Tracking: Automatically logs Created and Updated timestamps for every entry.
 
-# 3. Update a task status (Todo, InProgress, Done)
-$ ./task_manager modify 1 InProgress
+Robust Logic: Handles input validation and error messaging to prevent runtime crashes.
 
-# 4. Remove a task
-$ ./task_manager delete 1
-✨ Key Features
+Clean Architecture: Modular C++ design using separate classes for Tasks and Management.
 
-Professional CLI Menu: Guided user experience with built-in input validation.
+🧠 Engineering Takeaways
+OOP Mastery: Managed complex states (Todo/InProgress/Done) using enums and class methods.
 
+File I/O: Gained experience in parsing and writing structured data (JSON) in C++.
 
-JSON Persistence: Uses nlohmann/json to save and load tasks from tasks.json, ensuring data survives between sessions.
+UX Focus: Designed a CLI that provides immediate feedback and error guidance.
 
-Automated Timestamps: Automatically records "Created" and "Updated" times for every task entry.
-
-Error Handling: Robust checks for missing arguments or invalid IDs to prevent runtime crashes.
-
-🛠️ Technical Stack
-Language: C++17
-
-Persistence: JSON Data Format
-
-Tools: G++, Git, Linux/Unix Terminal
-
-🧠 What I Learned
-By building this project, I demonstrated the following engineering competencies:
-
-
-Object-Oriented Design: Developed a modular architecture using Task and TaskManager classes for clean, maintainable code.
-
-Data Integrity: Implemented logic to handle unique IDs and consistent state transitions (Todo → InProgress → Done).
-
-
-User-Centric Engineering: Focused on a descriptive "Help" system to make the tool intuitive for technical and non-technical users alike.
-
-
-🧪 Installation & Setup
-Clone the repository:
-
+🧪 Setup
 Bash
 
+# Clone & Compile
 git clone [https://github.com/Kostia20034/Task-Tracker.git](https://github.com/Kostia20034/Task-Tracker.git)
 cd Task-Tracker
-Compile the source:
-
-Bash
-
 g++ -o task_manager main.cpp task.cpp task_manager.cpp
-Run the app:
 
-Bash
-
+# Run
 ./task_manager
 
 
